@@ -10,6 +10,7 @@ class TabBarPanel extends StatefulWidget {
 class _TabBarPanelState extends State<TabBarPanel>
     with TickerProviderStateMixin {
   late TabController _tabController;
+  int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -19,31 +20,133 @@ class _TabBarPanelState extends State<TabBarPanel>
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: Colors.blue[300],
+          ),
+          child: TabBar(
+            controller: _tabController,
+            tabs: const <Widget>[
+              Text(
+                'Daily',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                'Weekly',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                'Monthly',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 200,
+          width: double.infinity,
+          child: TabBarView(
+            controller: _tabController,
+            children: const <Widget>[
+              TabBarItem(
+                textLabel: 'last day',
+                textStatLabel: '5.19k',
+              ),
+              TabBarItem(
+                textLabel: 'last week',
+                textStatLabel: '8.215k',
+              ),
+              TabBarItem(
+                textLabel: 'last month',
+                textStatLabel: '9.155k',
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class TabBarItem extends StatelessWidget {
+  final String textLabel;
+  final String textStatLabel;
+
+  const TabBarItem(
+      {Key? key, required this.textLabel, required this.textStatLabel})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        StatisticsLabel(
+          text: textLabel,
+        ),
+        SumWidget(
+          text: textStatLabel,
+        ),
+      ],
+    );
+  }
+}
+
+class StatisticsLabel extends StatelessWidget {
+  final String text;
+
+  const StatisticsLabel({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'The statistics of ',
+        ),
+        Text(
+          text,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class SumWidget extends StatelessWidget {
+  final String text;
+
+  const SumWidget({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 50,
+      width: 130,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: Colors.blue[300],
       ),
-      child: TabBar(
-        controller: _tabController,
-        tabs: const <Widget>[
-          Text(
-            'Daily',
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+      child: Center(
+        child: Text(
+          text,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            fontSize: 23,
           ),
-          Text(
-            'Weekly',
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-          Text(
-            'Monthly',
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-        ],
+        ),
       ),
     );
   }
