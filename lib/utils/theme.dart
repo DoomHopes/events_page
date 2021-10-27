@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
+      tabBarTheme: TabBarTheme(
+        indicatorSize: TabBarIndicatorSize.tab,
+        labelStyle: const TextStyle(
+          fontSize: 20,
+          color: Colors.white,
+        ),
+        unselectedLabelColor: Colors.white,
+        indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: const Color(0xFF0B173B),
+        ),
+      ),
       iconTheme: const IconThemeData(
         color: Colors.white,
       ),
@@ -17,11 +29,11 @@ class CustomTheme {
           color: Colors.white,
         ),
         headline1: TextStyle(
-          fontSize: 18,
+          fontSize: 23,
           color: Colors.white,
         ),
         headline2: TextStyle(
-          fontSize: 18,
+          fontSize: 23,
           color: Colors.white,
         ),
         subtitle1: TextStyle(
@@ -30,6 +42,10 @@ class CustomTheme {
         ),
         subtitle2: TextStyle(
           fontSize: 10,
+          color: Colors.white,
+        ),
+        button: TextStyle(
+          fontSize: 18,
           color: Colors.white,
         ),
       ),

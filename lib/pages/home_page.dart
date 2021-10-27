@@ -1,3 +1,4 @@
+import 'package:events_page/widgets/tap_bar_panel.dart';
 import 'package:events_page/widgets/seatch_panel.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,12 @@ class HomePage extends StatelessWidget {
                 text: 'Events',
               ),
             ),
+            const Positioned(
+              top: 145,
+              left: 20,
+              right: 20,
+              child: TabBarPanel(),
+            )
           ],
         ),
       ),
