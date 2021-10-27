@@ -30,16 +30,6 @@ class HomePage extends StatelessWidget {
                 text: 'Events',
               ),
             ),
-            const Center(
-              child: Text(
-                'Bite my shiny metal ass',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
           ],
         ),
       ),
