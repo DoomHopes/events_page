@@ -16,6 +16,22 @@ class CustomTheme {
           fontSize: 18,
           color: Colors.white,
         ),
+        headline1: TextStyle(
+          fontSize: 18,
+          color: Colors.white,
+        ),
+        headline2: TextStyle(
+          fontSize: 18,
+          color: Colors.white,
+        ),
+        subtitle1: TextStyle(
+          fontSize: 10,
+          color: Colors.white,
+        ),
+        subtitle2: TextStyle(
+          fontSize: 10,
+          color: Colors.white,
+        ),
       ),
     );
   }
