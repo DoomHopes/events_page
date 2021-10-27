@@ -27,9 +27,12 @@ class SearchPanel extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Icon(Icons.search),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: GestureDetector(
+              child: const Icon(Icons.search),
+              onTap: null,
+            ),
           ),
         ],
       ),
