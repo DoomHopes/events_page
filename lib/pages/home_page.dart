@@ -1,3 +1,4 @@
+import 'package:events_page/widgets/seatch_panel.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,27 +8,40 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Stack(
-        children: <Widget>[
-          ClipPath(
-            clipper: MyCustomClipper(),
-            child: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: const Color(0xFF0B173B),
-            ),
-          ),
-          const Center(
-            child: Text(
-              'Bite my shiny metal ass',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+      body: SizedBox(
+        height: double.infinity,
+        width: double.infinity,
+        child: Stack(
+          children: <Widget>[
+            ClipPath(
+              clipper: MyCustomClipper(),
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                color: const Color(0xFF0B173B),
               ),
             ),
-          ),
-        ],
+            const Positioned(
+              top: 45,
+              left: 5,
+              right: 5,
+              child: SearchPanel(
+                icon: Icons.arrow_circle_down_rounded,
+                text: 'Events',
+              ),
+            ),
+            const Center(
+              child: Text(
+                'Bite my shiny metal ass',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
