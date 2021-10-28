@@ -8,6 +8,7 @@ class CustomTheme {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
         systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Color(0xFF2A98D5),
           systemNavigationBarColor: Color(0xFF2A98D5),
         ),
       ),
