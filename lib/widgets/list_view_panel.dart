@@ -103,10 +103,10 @@ class _CardViewState extends State<CardView> {
         color: const Color(0xFF414068),
         borderRadius: BorderRadius.circular(30),
       ),
-      height: 200,
+      height: 300,
       width: 170,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           const Icon(

@@ -1,6 +1,7 @@
 import 'package:events_page/widgets/list_view_panel.dart';
 import 'package:events_page/widgets/tap_bar_panel.dart';
 import 'package:events_page/widgets/seatch_panel.dart';
+import 'package:events_page/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -43,6 +44,13 @@ class HomePage extends StatelessWidget {
               left: 0,
               right: 0,
               child: ListViewPanel(),
+            ),
+            const Positioned(
+              top: 540,
+              left: 20,
+              child: TitleWidget(
+                title: 'View the evets list',
+              ),
             ),
           ],
         ),
