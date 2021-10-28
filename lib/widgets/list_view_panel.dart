@@ -44,7 +44,7 @@ class CardView extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 13),
       decoration: BoxDecoration(
-        color: Color(0xFF414068),
+        color: const Color(0xFF414068),
         borderRadius: BorderRadius.circular(30),
       ),
       height: 200,
