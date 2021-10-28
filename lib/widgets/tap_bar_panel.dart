@@ -10,7 +10,6 @@ class TabBarPanel extends StatefulWidget {
 class _TabBarPanelState extends State<TabBarPanel>
     with TickerProviderStateMixin {
   late TabController _tabController;
-  int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -86,14 +85,19 @@ class TabBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        StatisticsLabel(
-          text: textLabel,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: StatisticsLabel(
+            text: textLabel,
+          ),
         ),
-        SumWidget(
-          text: textStatLabel,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15),
+          child: SumWidget(
+            text: textStatLabel,
+          ),
         ),
       ],
     );
