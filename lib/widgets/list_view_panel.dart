@@ -1,3 +1,4 @@
+import 'package:events_page/utils/my_behavior.dart';
 import 'package:flutter/material.dart';
 
 class ListViewPanel extends StatelessWidget {
@@ -8,33 +9,36 @@ class ListViewPanel extends StatelessWidget {
     return SizedBox(
       height: 150,
       width: double.infinity,
-      child: ListView(
-        children: const <Widget>[
-          ListTileWidget(
-            title: 'Luxury event',
-          ),
-          ListTileWidget(
-            title: 'The most beautiful event',
-          ),
-          ListTileWidget(
-            title: 'Hing event',
-          ),
-          ListTileWidget(
-            title: 'Some event',
-          ),
-          ListTileWidget(
-            title: 'Luxury event',
-          ),
-          ListTileWidget(
-            title: 'The most beautiful event',
-          ),
-          ListTileWidget(
-            title: 'Hing event',
-          ),
-          ListTileWidget(
-            title: 'Some event',
-          ),
-        ],
+      child: ScrollConfiguration(
+        behavior: MyBehavior(),
+        child: ListView(
+          children: const <Widget>[
+            ListTileWidget(
+              title: 'Luxury event',
+            ),
+            ListTileWidget(
+              title: 'The most beautiful event',
+            ),
+            ListTileWidget(
+              title: 'Hing event',
+            ),
+            ListTileWidget(
+              title: 'Some event',
+            ),
+            ListTileWidget(
+              title: 'Luxury event',
+            ),
+            ListTileWidget(
+              title: 'The most beautiful event',
+            ),
+            ListTileWidget(
+              title: 'Hing event',
+            ),
+            ListTileWidget(
+              title: 'Some event',
+            ),
+          ],
+        ),
       ),
     );
   }

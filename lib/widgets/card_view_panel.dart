@@ -1,13 +1,6 @@
+import 'package:events_page/utils/my_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-class MyBehavior extends ScrollBehavior {
-  @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
-    return child;
-  }
-}
 
 class CardViewPanel extends StatelessWidget {
   const CardViewPanel({Key? key}) : super(key: key);
