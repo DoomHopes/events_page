@@ -8,7 +8,7 @@ class TitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: 500,
       height: 30,
       child: Text(
         title,
