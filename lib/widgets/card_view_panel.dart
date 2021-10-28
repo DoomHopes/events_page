@@ -9,8 +9,8 @@ class MyBehavior extends ScrollBehavior {
   }
 }
 
-class ListViewPanel extends StatelessWidget {
-  const ListViewPanel({Key? key}) : super(key: key);
+class CardViewPanel extends StatelessWidget {
+  const CardViewPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
