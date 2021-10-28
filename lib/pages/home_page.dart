@@ -12,6 +12,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF2A98D5),
+      appBar: AppBar(
+        title: const Text('Events'),
+        leading: const Icon(Icons.arrow_circle_down_rounded),
+        actions: [
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            child: const Icon(Icons.search),
+          ),
+        ],
+      ),
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
@@ -25,36 +35,36 @@ class HomePage extends StatelessWidget {
                 color: const Color(0xFF2D2D51),
               ),
             ),
-            const Positioned(
-              top: 45,
+            /*const Positioned(
+              top: 50,
               left: 5,
               right: 5,
               child: SearchPanel(
                 icon: Icons.arrow_circle_down_rounded,
                 text: 'Events',
               ),
-            ),
+            ),*/
             const Positioned(
-              top: 115,
+              top: 40,
               left: 20,
               right: 20,
               child: TabBarPanel(),
             ),
             const Positioned(
-              top: 300,
+              top: 230,
               left: 0,
               right: 0,
               child: CardViewPanel(),
             ),
             const Positioned(
-              top: 560,
+              top: 480,
               left: 20,
               child: TitleWidget(
                 title: 'View the evets list',
               ),
             ),
             const Positioned(
-              top: 590,
+              top: 510,
               left: 20,
               right: 20,
               child: ListViewPanel(),
@@ -70,10 +80,10 @@ class MyCustomClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path()
-      ..moveTo(0, 200)
+      ..moveTo(0, 150)
       ..lineTo(0, size.height)
       ..lineTo(size.width, size.height)
-      ..lineTo(size.width, 600)
+      ..lineTo(size.width, 500)
       ..close();
     return path;
   }

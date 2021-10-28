@@ -6,7 +6,7 @@ class ListViewPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 150,
       width: double.infinity,
       child: ListView(
         children: const <Widget>[

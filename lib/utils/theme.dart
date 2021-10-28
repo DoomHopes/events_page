@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          systemNavigationBarColor: Color(0xFF2A98D5),
+        ),
+      ),
       tabBarTheme: TabBarTheme(
         indicatorSize: TabBarIndicatorSize.tab,
         labelStyle: const TextStyle(
