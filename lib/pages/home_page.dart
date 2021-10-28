@@ -45,26 +45,26 @@ class HomePage extends StatelessWidget {
               ),
             ),*/
             const Positioned(
-              top: 40,
+              top: 20,
               left: 20,
               right: 20,
               child: TabBarPanel(),
             ),
             const Positioned(
-              top: 230,
+              top: 210,
               left: 0,
               right: 0,
               child: CardViewPanel(),
             ),
             const Positioned(
-              top: 480,
+              top: 465,
               left: 20,
               child: TitleWidget(
                 title: 'View the evets list',
               ),
             ),
             const Positioned(
-              top: 510,
+              top: 505,
               left: 20,
               right: 20,
               child: ListViewPanel(),
