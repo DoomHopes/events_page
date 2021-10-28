@@ -7,6 +7,7 @@ class ListViewPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      //? height под вопросом, наверное не лучший вариант его тут указывать
       height: 150,
       width: double.infinity,
       child: ScrollConfiguration(

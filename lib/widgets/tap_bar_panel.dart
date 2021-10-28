@@ -111,19 +111,22 @@ class StatisticsLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          'The statistics of ',
+    return RichText(
+      text: TextSpan(
+        text: 'The statistics of ',
+        style: const TextStyle(
+          overflow: TextOverflow.clip,
+          fontSize: 18,
         ),
-        Text(
-          text,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
+        children: [
+          TextSpan(
+            text: text,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

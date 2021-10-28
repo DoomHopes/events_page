@@ -15,11 +15,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Events'),
         leading: const Icon(Icons.arrow_circle_down_rounded),
-        actions: [
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 10),
-            child: const Icon(Icons.search),
-          ),
+        actions: const [
+          Icon(Icons.search),
+          SizedBox(width: 10.0),
+          // Container(
+          //   margin: const EdgeInsets.symmetric(horizontal: 10),
+          //   child: const Icon(Icons.search),
+          // ),
         ],
       ),
       body: SizedBox(
