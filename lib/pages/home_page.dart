@@ -1,4 +1,4 @@
-import 'package:events_page/widgets/list_view_panel.dart';
+import 'package:events_page/widgets/card_view_panel.dart';
 import 'package:events_page/widgets/tap_bar_panel.dart';
 import 'package:events_page/widgets/seatch_panel.dart';
 import 'package:events_page/widgets/title_widget.dart';
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
               top: 300,
               left: 0,
               right: 0,
-              child: ListViewPanel(),
+              child: CardViewPanel(),
             ),
             const Positioned(
               top: 540,
