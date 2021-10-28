@@ -25,7 +25,7 @@ class _TabBarPanelState extends State<TabBarPanel>
           height: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
-            color: Colors.blue[300],
+            color: const Color(0xFF43B2E3),
           ),
           child: TabBar(
             controller: _tabController,
@@ -140,7 +140,7 @@ class SumWidget extends StatelessWidget {
       width: 130,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        color: Colors.blue[300],
+        color: const Color(0xFF43B2E3),
       ),
       child: Center(
         child: Text(

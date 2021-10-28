@@ -21,30 +21,14 @@ class ListViewPanel extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: const [
-            CardView(
-              color: Colors.black,
-            ),
-            CardView(
-              color: Colors.green,
-            ),
-            CardView(
-              color: Colors.black,
-            ),
-            CardView(
-              color: Colors.green,
-            ),
-            CardView(
-              color: Colors.black,
-            ),
-            CardView(
-              color: Colors.green,
-            ),
-            CardView(
-              color: Colors.black,
-            ),
-            CardView(
-              color: Colors.green,
-            ),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
+            CardView(),
           ],
         ),
       ),
@@ -53,20 +37,18 @@ class ListViewPanel extends StatelessWidget {
 }
 
 class CardView extends StatelessWidget {
-  final Color color;
-
-  const CardView({Key? key, required this.color}) : super(key: key);
+  const CardView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 13),
       decoration: BoxDecoration(
-        color: color,
+        color: Color(0xFF414068),
         borderRadius: BorderRadius.circular(30),
       ),
       height: 200,
-      width: 180,
+      width: 170,
     );
   }
 }

@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFF2A98D5),
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
-                color: const Color(0xFF0B173B),
+                color: const Color(0xFF2D2D51),
               ),
             ),
             const Positioned(

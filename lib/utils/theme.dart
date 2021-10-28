@@ -12,7 +12,7 @@ class CustomTheme {
         unselectedLabelColor: Colors.white,
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          color: const Color(0xFF0B173B),
+          color: const Color(0xFF2D2D51),
         ),
       ),
       iconTheme: const IconThemeData(
