@@ -1,3 +1,4 @@
+import 'package:events_page/widgets/list_view_panel.dart';
 import 'package:events_page/widgets/tap_bar_panel.dart';
 import 'package:events_page/widgets/seatch_panel.dart';
 import 'package:flutter/material.dart';
@@ -32,11 +33,17 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const Positioned(
-              top: 145,
+              top: 115,
               left: 20,
               right: 20,
               child: TabBarPanel(),
-            )
+            ),
+            const Positioned(
+              top: 300,
+              left: 0,
+              right: 0,
+              child: ListViewPanel(),
+            ),
           ],
         ),
       ),
